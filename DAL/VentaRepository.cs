@@ -8,7 +8,7 @@ using Entity;
 
 namespace DAL
 {
-    public class VentaRepository
+    public class VentaRepository : IVentaRepository
     {
         private readonly SqlConnection _connection;
         public IList<Venta> Ventas;
@@ -17,9 +17,9 @@ namespace DAL
         Venta venta;
         DetalleProducto detalleProducto;
 
-        public VentaRepository(ConnectionManager connection)
+        public VentaRepository(IConnectionManager connection)
         {
-            _connection = connection.conexion;
+            _connection = connection.Connection;
             Ventas = new List<Venta>();
             venta = new Venta();
             DetalleProductos = new List<DetalleProducto>();

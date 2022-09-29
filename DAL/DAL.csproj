@@ -48,6 +48,7 @@
     <Compile Include="IConnectionManager.cs" />
     <Compile Include="IProductoRepository.cs" />
     <Compile Include="IProveedorRepository.cs" />
+    <Compile Include="IVentaRepository.cs" />
     <Compile Include="ProductoRepository.cs" />
     <Compile Include="ProveedorRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

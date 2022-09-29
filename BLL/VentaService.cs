@@ -10,8 +10,8 @@ namespace BLL
 {
     public class VentaService
     {
-        private ConnectionManager connectionManager;
-        private VentaRepository ventaRepository;
+        private IConnectionManager connectionManager;
+        private IVentaRepository ventaRepository;
         IList<Venta> ventas;
 
         public VentaService(string stringConnection)
@@ -19,6 +19,12 @@ namespace BLL
             connectionManager = new ConnectionManager(stringConnection);
             ventaRepository = new VentaRepository(connectionManager);
             ventas = new List<Venta>();
+        }
+
+        public VentaService(IVentaRepository repo, IConnectionManager conn)
+        {
+            ventaRepository = repo;
+            connectionManager = conn;
         }
 
         public String GuardarVenta(Venta venta)
