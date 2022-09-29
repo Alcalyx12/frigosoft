@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{EB2051CA-2935-4275-9A95-F3CFFFC69EA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frigosoft.Test", "Frigosoft.Test\Frigosoft.Test.csproj", "{1FE8A394-19F9-4C85-9B53-280D90AFD894}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{EB2051CA-2935-4275-9A95-F3CFFFC69EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB2051CA-2935-4275-9A95-F3CFFFC69EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB2051CA-2935-4275-9A95-F3CFFFC69EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE8A394-19F9-4C85-9B53-280D90AFD894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE8A394-19F9-4C85-9B53-280D90AFD894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE8A394-19F9-4C85-9B53-280D90AFD894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE8A394-19F9-4C85-9B53-280D90AFD894}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

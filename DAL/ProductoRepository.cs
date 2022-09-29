@@ -8,16 +8,16 @@ using Entity;
 
 namespace DAL
 {
-    public class ProductoRepository
+    public class ProductoRepository : IProductoRepository
     {
         private readonly SqlConnection _connection;
         public IList<Producto> Productos;
         private SqlDataReader Reader;
         Producto producto;
 
-        public ProductoRepository(ConnectionManager connection)
+        public ProductoRepository(IConnectionManager connection)
         {
-            _connection = connection.conexion;
+            _connection = connection.Connection;
             Productos = new List<Producto>();
             producto = new Producto();
         }

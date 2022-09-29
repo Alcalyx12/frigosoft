@@ -8,18 +8,23 @@ using Entity;
 
 namespace DAL
 {
-    public class CompraRepository
+    public class CompraRepository : ICompraRepository
     {
         private readonly SqlConnection _connection;
         public IList<Compra> Compras;
         private SqlDataReader Reader;
         Compra compra;
 
-        public CompraRepository(ConnectionManager connection)
+        public CompraRepository(IConnectionManager connection)
         {
-            _connection = connection.conexion;
+            _connection = connection.Connection;
             Compras = new List<Compra>();
             compra = new Compra();
+        }
+
+        public CompraRepository()
+        {
+            Compras = new List<Compra>();
         }
 
         public Compra CrearCompra()

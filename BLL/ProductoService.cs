@@ -10,14 +10,22 @@ namespace BLL
 {
     public class ProductoService
     {
-        private ConnectionManager connectionManager;
-        private ProductoRepository productoRepository;
+        private IConnectionManager connectionManager;
+        private IProductoRepository productoRepository;
         IList<Producto> productos;
 
         public ProductoService(string stringConnection)
         {
             connectionManager = new ConnectionManager(stringConnection);
             productoRepository = new ProductoRepository(connectionManager);
+            productos = new List<Producto>();
+        }
+        
+        public ProductoService(IProductoRepository repository, IConnectionManager connectionManager)
+        {
+            productoRepository = repository;
+            this.connectionManager = connectionManager;
+            
             productos = new List<Producto>();
         }
 

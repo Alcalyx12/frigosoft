@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ConnectionManager
+    public class ConnectionManager : IConnectionManager
     {
         public string ConnectionString;
         internal SqlConnection conexion;
@@ -16,6 +16,16 @@ namespace DAL
         {
             ConnectionString = connectionString;
             conexion = new SqlConnection(connectionString);
+        }
+        
+        public ConnectionManager(SqlConnection connection)
+        {
+            conexion = connection;
+        }
+
+        public ConnectionManager()
+        {
+            
         }
 
         public void Open()
@@ -26,5 +36,7 @@ namespace DAL
         {
             conexion.Close();
         }
+
+        public SqlConnection Connection => conexion;
     }
 }
