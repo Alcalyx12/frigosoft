@@ -1,9 +1,0 @@
-C:\Users\LUISK\Documents\web\FrigoSoft\DAL\bin\Debug\DAL.dll
-C:\Users\LUISK\Documents\web\FrigoSoft\DAL\bin\Debug\DAL.pdb
-C:\Users\LUISK\Documents\web\FrigoSoft\DAL\bin\Debug\Entity.dll
-C:\Users\LUISK\Documents\web\FrigoSoft\DAL\bin\Debug\Entity.pdb
-C:\Users\LUISK\Documents\web\FrigoSoft\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
-C:\Users\LUISK\Documents\web\FrigoSoft\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\Users\LUISK\Documents\web\FrigoSoft\DAL\obj\Debug\DAL.csproj.CopyComplete
-C:\Users\LUISK\Documents\web\FrigoSoft\DAL\obj\Debug\DAL.dll
-C:\Users\LUISK\Documents\web\FrigoSoft\DAL\obj\Debug\DAL.pdb
