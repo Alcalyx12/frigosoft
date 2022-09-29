@@ -10,14 +10,21 @@ namespace BLL
 {
     public class ProveedorService
     {
-        private ConnectionManager connectionManager;
-        private ProveedorRepository proveedorRepository;
+        private IConnectionManager connectionManager;
+        private IProveedorRepository proveedorRepository;
         IList<Proveedor> proveedores;
 
         public ProveedorService(string stringConnection)
         {
             connectionManager = new ConnectionManager(stringConnection);
             proveedorRepository = new ProveedorRepository(connectionManager);
+            proveedores = new List<Proveedor>();
+        }
+
+        public ProveedorService(IProveedorRepository repository, IConnectionManager connectionManager)
+        {
+            this.connectionManager = connectionManager;
+            proveedorRepository = repository;
             proveedores = new List<Proveedor>();
         }
 

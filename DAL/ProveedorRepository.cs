@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    public class ProveedorRepository
+    public class ProveedorRepository : IProveedorRepository
     {
         private readonly SqlConnection _connection;
         public IList<Proveedor> Proveedores;
         private SqlDataReader Reader;
         Proveedor proveedor;
 
-        public ProveedorRepository(ConnectionManager connection)
+        public ProveedorRepository(IConnectionManager connection)
         {
-            _connection = connection.conexion;
+            _connection = connection.Connection;
             Proveedores = new List<Proveedor>();
             proveedor = new Proveedor();
         }
